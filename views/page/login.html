@@ -1,0 +1,26 @@
+<% include ../includes/head.html %>
+<% include ../includes/header.html %>
+<div id="main" class="width-450 padding-L30 login-page">
+    <form class="form-horizontal" method="post">
+        <fieldset>
+            <legend class="padding-B8">欢迎登陆《花开半春入了夏》</legend>
+            <%- message %>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="username">用户名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="input-xlarge form-control" id="username" name="userName" placeholder="花夏" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="passWord">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="input-xlarge form-control" id="passWord" name="passWord" value="">
+                </div>
+            </div>
+            <div class="form-group text-right padding-01-15">
+                <button type="submit" class="btn btn-primary">登陆</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+<% include ../includes/footer.html %>

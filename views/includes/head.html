@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title><%=: title %></title>
+<!-- Bootstrap -->
+<link href="/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"> -->
+<link href="/libs/bootstrap/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="/libs/jquery-SweetAlert/sweetalert.css">
+<link rel="stylesheet" href="/font/iconfont.css" media="screen">
+<link href="/css/public.css" rel="stylesheet" media="screen">
+<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="/libs/jquery-SweetAlert/sweetalert.min.js"></script>
+<script src="/libs/seajs/sea.js?v3.0.0" id="seajsnode"></script>
+<script type="text/javascript">
+// seajs 的简单配置
+seajs.config({
+    base: '/src/',
+    alias: {
+        'jQuery': '/libs/jquery/dist/jquery.min.js',
+        'numTocn': '../../js/numTocn'
+    }
+});
+</script>

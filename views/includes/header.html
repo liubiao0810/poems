@@ -1,0 +1,49 @@
+</head>
+<body>
+<div id="cont">
+    <header id="header" class="">
+        <div class="wrapper width-1200">
+            <div class="menu-bar">
+                <div class="left-part">
+                    <a href="/" id="poems">Poems</a>
+                    <div class="menu-nav">
+                        <div class="header-main-menu">
+                            <a href="#">
+                                <i class="icon iconfont vertical mr-8">&#xe613</i>
+                                诗
+                            </a>
+                            <a href="#">
+                                <i class="icon iconfont vertical mr-8">&#xe613</i>
+                                词
+                            </a>
+                            <a href="#">
+                                <i class="icon iconfont vertical mr-8">&#xe613</i>
+                                赋
+                            </a>
+                            <div class="up-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <div class="login-nav">
+                        <% if (user && user.userName) { %>
+                            <span>
+                                <%= user.userName %>
+                                <a class="btn btn-danger" href="/logout">退出</a>
+                            </span>
+                            <a class="btn btn-info" href="/admin/poems"><span class="text">后台</span></a>
+                        <% } else { %>
+                            <a class="login btn  btn-success" href="/login"><span class="text">登录</span></a>
+                        <% } %>
+                    </div>
+                </div>
+                <nav id="nav" class="text-left">
+                    <a href="/admin/list">列表</a>
+                </nav>
+                <!-- <form class="searching-unit" action="/search/" method="get" id="search_form" data-regestered="regestered">
+                    <input type="text" value="" placeholder="搜索你喜欢的" autocomplete="off" name="q" size="27" id="query">
+                    <a class="go" onclick="return false;" href="#"></a>
+                </form> -->
+            </div>
+        </div>
+    </header>

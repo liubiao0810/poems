@@ -1,0 +1,75 @@
+<% include ../includes/head.html %>
+<link href="/css/index.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" type="text/css" href="libs/water_fall/css/component.css" />
+<% include ../includes/header.html %>
+<div id="main" class="max-width-120 min-width-320">
+    <div id="container" class="clearfix">
+        <%
+            // 倒序排列，最新的在最前面;
+            poems.reverse()
+        %>
+        <% poems.forEach(function(poem) { %>
+        <div class="pin">
+            <div class="poems-cont text-center" hook-name="poems-cont">
+                <h4 hook-name="poems-title">
+                    <a href="/poems/<%= poem._id %>" class="poems-title ellipsis" title="<%= poem.poemsTitle %>">
+                        <%= poem.poemsTitle %>
+                    </a>
+                </h4>
+                <%
+                    var lines = JSON.parse(JSON.stringify(poem.lines));
+                    var linesArr = [];
+                %>
+                <% for (var line in lines) { %>
+                    <% linesArr.unshift(lines[line]); %>
+                <% } %>
+                <% for (var i = 0; i < linesArr.length; i++) { %>
+                    <p><%= linesArr[i] %></p>
+                <% } %>
+            </div>
+            <div class="convo attribution clearfix">
+                <a class="user-img" title="<%= poem.writer %>" href="#">
+                    <img class="avt" src="/images/user/user.jpg" width="34" height="34">
+                </a>
+                <div class="text">
+                    <div class="inner">
+                        <div class="line">
+                            <a class="author" title="<%= poem.writer %>" href="#"><%= poem.writer %></a>
+                        </div>
+                        <div class="line">
+                            <a class="support" href="#">
+                                <i></i>
+                                <span hook-name="support"><%= poem.support %></span>
+                            </a>
+                            <a class="replyButton" title="点赞">
+                                <i class="icon iconfont vertical mr-8">&#xe6a4;</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pull-left enter-date padding-10-8">
+                    <span>
+                        <% if (poem && poem.writeDte) { %>
+                            <%= poem.writeDte %>
+                        <% } else { %>
+                            <%= moment(poem.meta.createAt).format('YYYY-MM-DD') %>
+                        <% } %>
+                    </span>
+                </div>
+                <div class="pull-right padding-10-8">
+                    <% if (user && user.userName) { %>
+                        <a class="edtor" href="../admin/poems/update/<%= poem._id %>" target="_blank">编辑</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<script type="text/javascript">
+// 加载入口模块
+seajs.use('index/index-view.js', function(indexView) {
+    indexView.init();
+});
+</script>
+<% include ../includes/footer.html %>

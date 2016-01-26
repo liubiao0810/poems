@@ -1,0 +1,517 @@
+/**
+ * @file 公共css文件
+ * @author 刘彪(liubiao01@itoxs.com)
+ * @version V0.01
+ * @date 2015-12-31
+ */
+html,
+body {
+    font-size: 100%;
+    background: #fff;
+    height: 100%;
+}
+body {
+    font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+a {
+  color: #444;
+  cursor: pointer;
+}
+a:active,
+a:focus {
+    outline: none!important;
+    outline-offset: 0;
+}
+a:hover{
+  text-decoration: none;
+  color: #ef4c57;
+}
+a,
+input,
+button,
+textarea{
+    -webkit-transition: all 0.618s ease-in 0s;
+     -moz-transition: all 0.618s ease-in 0s;
+      -ms-transition: all 0.618s ease-in 0s;
+       -o-transition: all 0.618s ease-in 0s;
+          transition: all 0.618s ease-in 0s;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+*html .clearfix{height:1%}
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.color {
+    color: #ef4c57;
+}
+.bg-white {
+    background: #fff!important;
+}
+.fs-12 {
+    font-size: .75em;
+}
+.vertical {
+    vertical-align: middle;
+}
+.vertical-06 {
+    vertical-align: -6px;
+}
+.dis-inline-block {
+    display: inline-block;
+}
+.color-ccc {
+    color: #ccc;
+}
+.ml-22 {
+    margin-left: 22px;
+}
+.mr-8 {
+    margin-right: 8px;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+.mr-25 {
+    margin-right: 25px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mb-8 {
+    margin-bottom: 8px;
+}
+.enter-date {
+    margin-left: -35px;
+}
+.font-s-12 {
+    font-size: .75em;
+}
+.height-150 {
+    width: 100%;
+    height: 150px;
+}
+.height-180 {
+    height: 180px;
+}
+.min-height {
+    min-height: 100%;
+}
+#cont {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 180px;
+    padding-top: 48px;
+}
+
+/*header*/
+#header {
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    height: 48px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+.wrapper {
+    border: none;
+    margin: 0 auto;
+    position: relative;
+}
+.width-16_8 {
+    width: 16.8%;
+}
+.width-10 {
+    width: 10%;
+}
+.width-11 {
+    width: 11%;
+}
+.width-28_8 {
+    width: 28.8%;
+}
+.width-50 {
+    width: 50%;
+}
+.width-52 {
+    width: 52%;
+}
+.width-100_100 {
+    width: 100%;
+}
+.width-100_82 {
+    width: 82%;
+}
+.max-width-120 {
+    max-width: 1200px;
+}
+.min-width-320 {
+    min-width: 320px;
+}
+.width-1200 {
+    width: 1200px;
+}
+.width-915 {
+    width: 915px;
+}
+.width-960 {
+    width: 960px;
+}
+.width-450 {
+    width: 450px;
+}
+.padding-01-52 {
+    padding: 0 52px;
+}
+.padding-01-100 {
+    padding: 0 100px;
+}
+.padding-10-8 {
+    padding: 8px 0;
+}
+.padding-10-30 {
+    padding: 30px 0;
+}
+.padding-01-15 {
+    padding: 0 15px;
+}
+.padding-B8 {
+    padding-bottom: 8px;
+}
+.padding-L14 {
+    padding-left: 14px;
+}
+.padding-L22 {
+    padding-left: 22px;
+}
+.padding-L30 {
+    padding-left: 30px;
+}
+.padding-L153 {
+    padding-left: 153px;
+}
+.padding-R15 {
+    padding-right: 15px;
+}
+.padding-R26 {
+    padding-right: 26px;
+}
+.padding-R51_2 {
+    padding-right: 3.2em;
+}
+.menu-bar {
+    height: 48px;
+    text-align: center;
+}
+.menu-bar .left-part {
+    float: left;
+    margin-top: 6px;
+    padding-right: 20px;
+}
+.menu-bar .right-part {
+    float: right;
+    margin-left: 20px;
+}
+#poems {
+    background: url("/images/logo.gif") no-repeat center center;
+    float: left;
+    height: 36px;
+    margin-right: 20px;
+    width: 36px;
+    padding: 4px 0 0 36px;
+    color: #444;
+    font-size: 1.6em;
+    text-indent: 0.2em;
+    text-decoration: none;
+}
+#poems:hover {
+    color: #ef4c57;
+}
+.menu-bar .menu-nav {
+    background: url("/images/menu_sprite.svg") no-repeat 0 -248px;
+    cursor: pointer;
+    float: left;
+    height: 28px;
+    margin-right: 20px;
+    position: relative;
+    width: 24px;
+    margin: 7px 0 0 70px;
+}
+.header-main-menu {
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    display: none;
+    left: -64px;
+    padding: 20px 0 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 50px;
+    width: 110px;
+    z-index: 1;
+}
+.header-main-menu a {
+    display: block;
+    line-height: 2em;
+    color:#444;
+    padding-left: 20px;
+}
+.header-main-menu a:hover {
+    color: #ef4c57;
+    background: #edece9;
+}
+.header-main-menu .up-arrow {
+    background: url("/images/menu_arrow.png") no-repeat 0 0;
+    height: 10px;
+    left: 50%;
+    margin-left: -9px;
+    position: absolute;
+    top: -9px;
+    width: 18px;
+}
+.menu-bar .login-nav {
+    display: inline-block;
+    line-height: 48px;
+}
+.login {
+    margin-right: 10px;
+}
+.searching-unit {
+    float: left;
+    position: relative;
+}
+.menu-bar .searching-unit {
+    float: none;
+    margin-right: 20px;
+    overflow: hidden;
+    padding-top: 8px;
+}
+.searching-unit input {
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    color: #bbb;
+    font-size: 14px;
+    height: 34px;
+    padding: 0 6px 0 12px;
+    width: 100%;
+}
+.searching-unit input:focus {
+    background: #fff;
+    border-color: #bbb;
+    color: #777;
+}
+.searching-unit .go {
+    background: url("/images/menu_sprite.svg") no-repeat 5px -93px;
+    cursor: pointer;
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 32px;
+}
+#search_form.searching-unit .go {
+    top: 8px;
+}
+/*nav*/
+#nav {
+    float: none;
+    margin-right: 20px;
+    overflow: hidden;
+    line-height: 3.2em;
+    position: relative;
+    padding-left: 38px;
+}
+#nav a {
+    display: inline-block;
+    padding: 0 .8em;
+}
+/*main*/
+#main {
+    margin: 16px auto 0;
+}
+#container {
+    position: relative;
+}
+.pin {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    width: 208px;
+    position: absolute;
+    /*float: left;*/
+    margin-left: 2%;
+    margin-top: 2%;
+    transition: height ease 0.2s;
+}
+.poems-cont {
+    padding: 1em 0;
+    height: 175px;
+    overflow: hidden;
+    transition: height ease 0.2s;
+}
+.poems-title {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+}
+.poems-cont p {
+    color:#444;
+    font-size: 1.2em;
+    font-family: inherit;
+    padding: 0 1em;
+}
+.convo {
+    padding: 0 1em;
+}
+.convo::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.convo a {
+    color: #444;
+}
+.convo a:hover {
+    color: #ef4c57;
+}
+.support i {
+    display: inline-block;
+    height: 14px;
+    margin-right: 2px;
+    vertical-align: middle;
+    width: 12px;
+    background: url("/images/action_like.svg") no-repeat 0 0;
+}
+.support:hover i {
+    background-position: 0px -60px;
+}
+.pin .convo .user-img {
+    display: block;
+    float: left;
+    height: 34px;
+    margin: 16px 0;
+    width: 34px;
+}
+.pin .convo .text {
+    float: left;
+    height: 51px;
+    line-height: 1.5;
+    margin-left: 4px;
+    padding: 15px 0 0 10px;
+    position: relative;
+}
+.support-active {
+    color: #ef4c57;
+}
+.author {
+    display: block;
+    overflow: hidden;
+    width: 135px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.attribution {
+    background: #fafafa;
+    border-top: 1px solid #f2f2f2;
+    color: #999;
+    position: relative;
+}
+.replyButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+.write {
+    border-top: 1px solid #d9d4d4;
+    box-shadow: 0 1px #fcfafa inset;
+    padding: 15px;
+    position: relative;
+}
+.clear-input {
+    background: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
+    color: #777;
+    display: inline-block;
+    font-size: 16px;
+    height: 36px;
+    line-height: 1;
+    padding: 0 10px;
+    width: 250px;
+}
+textarea.clear-input {
+    height: auto;
+    line-height: 1.5;
+    min-height: 78px;
+    padding: 5px 10px;
+}
+.write textarea {
+    border-color: #ddd;
+    display: block;
+    font-size: 12px;
+    height: 34px;
+    line-height: 1em;
+    font-size: 0.9em;
+    margin-left: 43px;
+    min-height: 0;
+    overflow: hidden;
+    transition: width 0.25s ease-in-out 0s;
+    width: 135px;
+    resize:none;
+}
+.pin .write .user-img {
+    margin: 0;
+}
+.write form {
+    position: relative;
+}
+.write textarea.clear-input:focus {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    color: #444;
+}
+.add-text {
+    position: absolute;
+    bottom: -40px;
+    right: 0px;
+    line-height: 1em;
+    font-size: 1em;
+}
+/*footer*/
+#footer {
+    width:100%;
+    height:150px;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    border-top: 1px solid #e5e5e5;
+    background: #fff;
+}
+/*login*/
+.login-page {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 90px;
+}
+.login-button {
+    padding-left: 0;
+    padding-right: 0;
+}
+/*修改bootstrap样式*/
+.samll-btn {
+    font-size: .75em;
+    padding: 4px 8px;
+}

@@ -1,0 +1,75 @@
+<% include ../includes/head.html %>
+<% include ../includes/header.html %>
+<div id="main" class="width-915 padding-L30 min-height">
+    <div class="page-header clearfix">
+        <h2><%=: title %></h2>
+    </div>
+    <form id="poems-form" method="post" action="/admin/poems/new" class="form-horizontal">
+        <input type='hidden' name="poems[_id]" value="<%= poems._id %>">
+        <input type='hidden' name="poems[writer]" value="<%= user.userName %>">
+        <div class="form-group">
+            <label class="col-sm-2 control-label mr-15" for="poems-title">题目</label>
+            <div class="pull-left">
+                <input type="text" class="form-control" required value="" name="poems[poemsTitle]" id="poems-title">
+            </div>
+            <label class="col-sm-2 control-label width-11" for="write-date">创作时间</label>
+            <div class="pull-left width-28_8">
+                <!-- <input type="text" class="form-control width-52" value="" name="poems[poemsDate]" id="write-date"> -->
+                <div class="input-group date form_date" data-date="" data-date-format="yyyy-MM-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control bg-white" name="poems[writeDte]" required size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+            <label class="col-sm-1 control-label" for="write-type">体裁</label>
+            <div class="pull-right mr-25">
+                <select class="form-control padding-L14" required value="" name="poems[writeType]">
+                    <option value="1">诗</option>
+                    <option value="2">词</option>
+                    <option value="3">赋</option>
+                </select>
+            </div>
+        </div>
+        <div id="lines">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-1">第壹句</label>
+                <div class="col-sm-10 width-100_82">
+                    <input type="text" class="form-control" required value="" name="poems[lines][poem_1]" id="input-1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-2">第贰句</label>
+                <div class="col-sm-10 width-100_82">
+                    <input type="text" class="form-control" required value="" name="poems[lines][poem_2]" id="input-2">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-3">第叁句</label>
+                <div class="col-sm-10 width-100_82">
+                    <input type="text" class="form-control" required value="" name="poems[lines][poem_3]" id="input-3">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-4">第肆句</label>
+                <div class="col-sm-10 width-100_82">
+                    <input type="text" class="form-control" required value="" name="poems[lines][poem_4]" id="input-4">
+                </div>
+            </div>
+            <div hook-name="new-lines"></div>
+        </div>
+        <div class="padding-L153 mt-30">
+            <button class="btn btn btn-danger fs-12" type="button" hook-name="delete-line">删一联</button>
+            <button class="btn btn-success fs-12"  type="button"hook-name="add-line">增一联</button>
+        </div>
+        <div class="form-group text-right padding-R26">
+            <button class="btn btn-success" type="submit">录入</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+// 加载入口模块
+seajs.use("new/new-view.js", function(newView) {
+    newView.init();
+});
+</script>
+<% include ../includes/footer.html %>

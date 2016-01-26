@@ -1,0 +1,50 @@
+<footer id="footer" class="padding-10-30">
+    <div class="container">
+    <div class="row footer-top">
+        <div class="col-sm-6 col-lg-6">
+            <h4>
+              <img src="/images/logo.gif">
+              <span class="vertical-06">花夏集</span>
+            </h4>
+            <p>本网站所列的诗词赋全部由<a href="#">花夏</a>创作<a target="_blank" href="#">CC BY 1.0</a>协议发布。</p>
+            <p>beta版本：v1.0.0</p>
+        </div>
+        <div class="col-sm-6  col-lg-5 col-lg-offset-1">
+            <div class="row about">
+                <div class="col-xs-3">
+                    <h4>联系方式</h4>
+                    <ul class="list-unstyled">
+                        <li><a target="_blank" title="花夏官方微博" href="http://weibo.com/p/1005055235508269">新浪微博</a></li>
+                        <li><a href="mailto:liubiao@itoxs.com">电子邮件</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-3">
+                    <h4>旗下网站</h4>
+                    <ul class="list-unstyled">
+                        <li><a target="_blank" href="http://fex.onlove.cc/">技术博客</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>
+</div>
+<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/libs/bootstrap/dist/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script>
+$(function () {
+    $('.form_date').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        pickerPosition: "bottom-left"
+    });
+});
+</script>
+</body>
+</html>

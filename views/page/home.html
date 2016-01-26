@@ -1,0 +1,24 @@
+<% include ../includes/head.html %>
+<% include ../includes/header.html %>
+<div id="main" class="width-915 padding-L30 min-height login-page">
+    <div class="alert alert-info">
+        <h1 >Welcome <%= user.userName %>, 欢迎登陆！！！</h1>
+        <span class="mato-index"><em class="color" hook-name="mato-index">3</em> 秒后进入<a href="/" class="color">首页</a></span>
+        <a class="btn btn-danger pull-right" href="/logout">退出</a>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var loginTimer = null;
+        loginTimer = setInterval(function () {
+            var second = $('[hook-name = mato-index]').html() - 0;
+            $('[hook-name = mato-index]').html(--second);
+            if (second === 0) {
+                second = 0;
+                clearInterval(loginTimer);
+                window.location.href = '/';
+            }
+        }, 1000);
+    });
+</script>
+<% include ../includes/footer.html %>

@@ -1,0 +1,22 @@
+<% include ../includes/head.html %>
+<% include ../includes/header.html %>
+<div id="main" class="width-915 padding-L30 min-height login-page">
+    <div class="alert alert-info text-left">
+        <h1 ><%= user.userName %>, 正在退出<span hook-name="user-logout"></span></h1>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var loginoutTimer = null;
+        loginoutTimer = setInterval(function () {
+            var secondStr = $('[hook-name = user-logout]').html();
+            $('[hook-name = user-logout]').html(secondStr + '.');
+            if (secondStr === '..') {
+                secondStr = '';
+                clearInterval(loginoutTimer);
+                window.location.href = '/';
+            }
+        }, 1000);
+    });
+</script>
+<% include ../includes/footer.html %>

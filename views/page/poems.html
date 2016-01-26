@@ -1,0 +1,38 @@
+<% include ../includes/head.html %>
+<link href="/css/detail.css" rel="stylesheet" media="screen">
+<% include ../includes/header.html %>
+<div id="main" class="width-1200 min-height">
+    <div class="piece">
+        <div class="poems-cont text-center">
+            <div>
+                <h2><%= poem.poemsTitle %></h2>
+            </div>
+            <div class="font-s-12 color-ccc mb-8">
+                <span>作者：<i><%= poem.writer %></i></span>
+                <span>&nbsp;&nbsp;时间：
+                    <i>
+                        <% if (poem && poem.writeDte) { %>
+                        <%= poem.writeDte %>
+                        <% } else { %>
+                            <%= moment(poem.meta.createAt).format('YYYY-MM-DD') %>
+                        <% } %>
+                    </i>
+                </span>
+                <% if (user && user.userName) { %>
+                    <a class="edtor">编辑</a>
+                <% } %>
+            </div>
+            <%
+                var lines = JSON.parse(JSON.stringify(poem.lines));
+                var linesArr = [];
+            %>
+            <% for (var line in lines) { %>
+                <% linesArr.unshift(lines[line]); %>
+            <% } %>
+            <% for (var i = 0; i < linesArr.length; i++) { %>
+                <p><%= linesArr[i] %></p>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% include ../includes/footer.html %>
