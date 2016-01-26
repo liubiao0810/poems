@@ -135,7 +135,7 @@ module.exports = {
         app.post('/login', function(req, res){
             var user = {
                 userName: '花夏',
-                passWord: 'Lb1024',
+                passWord: '',
                 regTime: '2016-01-01'
             };
             if(req.body.userName == user.userName && req.body.passWord == user.passWord){
