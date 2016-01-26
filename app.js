@@ -17,10 +17,10 @@ var users = require('./routes/user');
 var api = require('./api/init');
 var SessionStore = require("session-mongoose")(express);
 var store = new SessionStore({
-    url: "mongodb://liubiao:liubiao910810@ds045785.mongolab.com:45785/maxchar/session",
+    url: "mongodb://localhost/session",
     interval: 120000
 });
-mongoose.connect('mongodb://liubiao:liubiao910810@ds045785.mongolab.com:45785/maxchar/poems');
+mongoose.connect('mongodb://localhost:27017/poems');
 var app = express();
 
 
@@ -74,13 +74,9 @@ app.use(function(req, res, next) {
 });
 
 // 启动及端口
-// http.createServer(app).listen(app.get('port'), function(){
-//     console.log('启动成功，端口为' + app.get('port'));
-//     console.log('主页地址：http://localhost:3000/');
-// });
-http.createServer(app).listen(0, function(){
-    // console.log('启动成功，端口为' + app.get('port'));
-    console.log('主页地址：http://poems.aliapp.com/');
+http.createServer(app).listen(app.get('port'), function(){
+    console.log('启动成功，端口为' + app.get('port'));
+    console.log('主页地址：http://localhost:3000/');
 });
 /// error handlers
 
